@@ -11,7 +11,7 @@ Keep in mind that if you want to run it on windows Scrapy-playwright needs addit
 
 Cloning the repository:
 ```bash
-git clone 'repo-link!'
+git clone ['repo-link!'](https://github.com/vasskess/mango_products_info)
 
 ```
 
