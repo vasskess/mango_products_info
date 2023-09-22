@@ -15,7 +15,7 @@ git clone https://github.com/vasskess/mango_products_info
 
 ```
 
-Create a virtual environment and activate and activate it.
+Create a virtual environment and activate it.
 
 Install the requirements :
 ```bash
