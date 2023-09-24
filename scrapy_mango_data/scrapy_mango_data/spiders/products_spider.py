@@ -1,9 +1,11 @@
 import scrapy
+import json
 from scrapy_playwright.page import PageMethod
 
 
 class MangoProductsSpider(scrapy.Spider):
     name = "products"
+    product_data_list = []
 
     def start_requests(self):
         urls = [
@@ -28,6 +30,7 @@ class MangoProductsSpider(scrapy.Spider):
         await page.close()
 
         product_data = self.get_and_parse_products_info(response)
+        self.product_data_list.append(product_data)
         yield product_data
 
     @staticmethod
@@ -47,3 +50,7 @@ class MangoProductsSpider(scrapy.Spider):
     async def errback(failure):
         page = failure.request.meta["playwright_page"]
         await page.close()
+
+    def closed(self, reason):
+        with open("product_data.json", "w") as json_file:
+            json.dump(self.product_data_list, json_file, ensure_ascii=False, indent=4)
