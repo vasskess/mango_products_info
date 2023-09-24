@@ -38,9 +38,9 @@ class MangoProductsSpider(scrapy.Spider):
         product_data = {
             "item_name": response.css("h1::text").get(),
             "item_color": response.css("span.colors-info-name::text").get(),
-            "item_price": response.css("span.sAobE.text-title-xl::text")
-            .get()
-            .split(" ")[1],
+            "item_price": float(
+                response.css("span.sAobE.text-title-xl::text").get().split(" ")[1]
+            ),
             "item_sizes": response.css("span.text-title-m.gk2V5::text").getall(),
         }
 
