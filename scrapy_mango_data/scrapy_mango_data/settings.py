@@ -96,3 +96,12 @@ DOWNLOAD_HANDLERS = {
     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
 }
+
+FEEDS = {
+    "product_data.jsonl": {
+        "format": "jsonlines",
+        "store_empty": False,
+        "encoding": "utf8",
+        "overwrite": True,
+    },
+}

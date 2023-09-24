@@ -35,5 +35,5 @@ scrapy crawl products
 <br>
 <div style="letter-spacing: 2px;">
   
-Wait until you see: ```INFO: Closing browser``` in the terminal. You should be able to see a ```product_data.json``` file that is created in your ```scrapy_mango_data``` directory. Please note that the data in the ```.json``` might not follow the order of the urls, since no custom ordering is implemented and also this is a bit hardcoded ```"item_price": response.css("span.sAobE.text-title-xl::text").get().split(" ")[1]``` and might have unexpected output if the price format is different ```(Example: 15.55 $)```, but for those two urls the format is ```(лв. 39.99) and (£ 39.99)``` and it works fine.
+Wait until you see: ```INFO: Closing browser``` in the terminal. You should be able to see a ```product_data.jsonl``` file that is created in your ```scrapy_mango_data``` directory. Please note that the data in the ```.jsonl``` might not follow the order of the urls, since no custom ordering is implemented and also this is a bit hardcoded ```"item_price": response.css("span.sAobE.text-title-xl::text").get().split(" ")[1]``` and might have unexpected output if the price format is different ```(Example: 15.55 $)```, but for those two urls the format is ```(лв. 39.99) and (£ 39.99)``` and it works fine.
 </div>
