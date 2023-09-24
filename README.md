@@ -11,11 +11,11 @@ Keep in mind that if you want to run it on windows Scrapy-playwright needs addit
 
 Cloning the repository:
 ```bash
-git clone 'repo-link!'
+git clone https://github.com/vasskess/mango_products_info
 
 ```
 
-Create a virtual environment and activate and activate it.
+Create a virtual environment and activate it.
 
 Install the requirements :
 ```bash
